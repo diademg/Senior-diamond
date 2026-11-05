@@ -16,11 +16,6 @@ export default function Home() {
         <h1 className="hero-title" id="hero-title"><span className="title-line">I Design &amp; Build</span><span className="title-line"><em>Webflow</em> Websites</span><span className="title-line">That Move Brands</span><span className="title-line">Forward<span className="period">.</span></span></h1>
         <p className="hero-copy">I help businesses and founders create modern, high-performing Webflow websites — from design and redesign to CMS and fully responsive builds.</p>
         <div className="hero-actions"><a className="button-dark" href="#work">Explore My Work <Arrow/></a><a className="button-outline" href="#contact">Let’s Work Together</a></div>
-        <div className="service-row">
-          <div><b>◇</b><span>Webflow Design<br/>&amp; Development</span></div>
-          <div><b>▤</b><span>Webflow CMS<br/>&amp; Content Setup</span></div>
-          <div><b>↗</b><span>Webflow Redesign<br/>&amp; Optimization</span></div>
-        </div>
         <div className="project-pill"><i className="dot"/> Available for new projects</div>
       </div>
       <div className="hero-visual">
