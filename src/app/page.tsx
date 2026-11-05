@@ -1,4 +1,4 @@
-const portrait = "https://raw.githubusercontent.com/diademg/Senior-diamond/main/ChatGPT_Image_Sep_12__2026__08_46_11_AM-removebg-preview-removebg-preview.png";
+const portrait = "/images/ChatGPT_Image_Sep_12__2026__08_46_11_AM-removebg-preview-removebg-preview.png";
 const Arrow = () => <span aria-hidden="true">↗</span>;
 export default function Home() {
   return <main className="site-shell">
