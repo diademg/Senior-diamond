@@ -25,6 +25,18 @@ export default function Home() {
       </div>
     </section>
     <footer className="hero-bottom"><span>WEBFLOW DESIGN · DEVELOPMENT · CMS</span><span>Thoughtful websites. Built to move brands forward.</span><a href="#about">SCROLL TO EXPLORE ↓</a></footer>
+    <section className="stats-strip" aria-label="A little perspective">
+      <div className="stats-heading">
+        <span>A LITTLE PERSPECTIVE</span>
+        <p>Good work, built with good people.</p>
+      </div>
+      <div className="stats-grid">
+        <article className="stat-item"><span className="stat-index">01</span><strong>150+</strong><p>Projects completed</p></article>
+        <article className="stat-item"><span className="stat-index">02</span><strong>70+</strong><p>Clients served</p></article>
+        <article className="stat-item"><span className="stat-index">03</span><strong>45+</strong><p>Brands supported</p></article>
+        <article className="stat-item"><span className="stat-index">04</span><strong>10+</strong><p>Platforms &amp; tools used</p></article>
+      </div>
+    </section>
     <section className="below-fold" id="about"><span>01 / ABOUT</span><p>Good digital experiences begin with clarity, thoughtful design, and attention to detail.</p></section>
     <div id="services"/><div id="work"/><div id="process"/><div id="testimonials"/><div id="faq"/><div id="contact"/>
   </main>;
