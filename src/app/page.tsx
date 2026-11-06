@@ -37,7 +37,37 @@ export default function Home() {
         <article className="stat-item"><span className="stat-index">04</span><strong>10+</strong><p>Platforms &amp; tools used</p></article>
       </div>
     </section>
+    <section className="selected-work" id="work" aria-labelledby="work-title">
+      <div className="work-intro">
+        <div><span className="section-eyebrow">SELECTED WORK / 2026</span><h2 id="work-title">A few projects, <em>built with purpose.</em></h2></div>
+        <p>A look at websites shaped around each brand, its audience, and the experience it needs to deliver.</p>
+      </div>
+      <div className="work-grid">
+        <article className="work-card">
+          <a className="work-preview" href="https://bokt-updated-site.webflow.io/" target="_blank" rel="noreferrer" aria-label="View Bokt website">
+            <iframe src="https://bokt-updated-site.webflow.io/" title="Bokt website preview" loading="lazy" tabIndex={-1}/>
+            <span className="preview-open"><Arrow/></span>
+          </a>
+          <div className="work-meta"><div className="work-title-wrap"><span className="work-number">01</span><div><h3>Bokt</h3><p>BRAND WEBSITE</p></div></div><a className="work-arrow" href="https://bokt-updated-site.webflow.io/" target="_blank" rel="noreferrer" aria-label="Open Bokt project"><Arrow/></a></div>
+        </article>
+        <article className="work-card">
+          <a className="work-preview" href="https://www.outdoorgrillingcompanybbq.com/" target="_blank" rel="noreferrer" aria-label="View Outdoor Grilling Company website">
+            <iframe src="https://www.outdoorgrillingcompanybbq.com/" title="Outdoor Grilling Company website preview" loading="lazy" tabIndex={-1}/>
+            <span className="preview-open"><Arrow/></span>
+          </a>
+          <div className="work-meta"><div className="work-title-wrap"><span className="work-number">02</span><div><h3>Outdoor Grilling Company</h3><p>BBQ CATERING · HOSPITALITY</p></div></div><a className="work-arrow" href="https://www.outdoorgrillingcompanybbq.com/" target="_blank" rel="noreferrer" aria-label="Open Outdoor Grilling Company project"><Arrow/></a></div>
+        </article>
+        <article className="work-card">
+          <a className="work-preview" href="https://www.ownpath401k.com/" target="_blank" rel="noreferrer" aria-label="View OwnPath 401k website">
+            <iframe src="https://www.ownpath401k.com/" title="OwnPath 401k website preview" loading="lazy" tabIndex={-1}/>
+            <span className="preview-open"><Arrow/></span>
+          </a>
+          <div className="work-meta"><div className="work-title-wrap"><span className="work-number">03</span><div><h3>OwnPath 401(k)</h3><p>RETIREMENT · FINANCIAL SERVICES</p></div></div><a className="work-arrow" href="https://www.ownpath401k.com/" target="_blank" rel="noreferrer" aria-label="Open OwnPath 401k project"><Arrow/></a></div>
+        </article>
+      </div>
+      <div className="work-footer"><span>SELECTED WORK / 2026</span><span>Strategy, design &amp; Webflow development</span></div>
+    </section>
     <section className="below-fold" id="about"><span>01 / ABOUT</span><p>Good digital experiences begin with clarity, thoughtful design, and attention to detail.</p></section>
-    <div id="services"/><div id="work"/><div id="process"/><div id="testimonials"/><div id="faq"/><div id="contact"/>
+    <div id="services"/><div id="process"/><div id="testimonials"/><div id="faq"/><div id="contact"/>
   </main>;
 }
