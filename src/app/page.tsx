@@ -45,7 +45,7 @@ export default function Home() {
       <div className="work-grid">
         <article className="work-card">
           <a className="work-preview" href="https://bokt-updated-site.webflow.io/" target="_blank" rel="noreferrer" aria-label="View Bokt website">
-            <img className="work-thumbnail" src="https://image.thum.io/get/width/1200/crop/800/noanimate/https://bokt-updated-site.webflow.io/" alt="Preview of the Bokt website" loading="lazy"/>
+            <img className="work-thumbnail" src="https://image.thum.io/get/width/1200/crop/800/wait/5/noanimate/https://bokt-updated-site.webflow.io/" alt="Preview of the Bokt website" loading="lazy"/>
             <span className="preview-open"><Arrow/></span>
           </a>
           <div className="work-meta"><div className="work-title-wrap"><span className="work-number">01</span><div><h3>Bokt</h3><p>BRAND WEBSITE</p></div></div><a className="work-arrow" href="https://bokt-updated-site.webflow.io/" target="_blank" rel="noreferrer" aria-label="Open Bokt project"><Arrow/></a></div>
