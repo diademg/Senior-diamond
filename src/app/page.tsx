@@ -87,7 +87,7 @@ export default function Home() {
       </div>
       <div className="services-footer"><span>DESIGN · DEVELOPMENT · DIGITAL GROWTH</span><a href="#contact">Have a project in mind? Let’s talk ↗</a></div>
     </section>
-    <section className="below-fold" id="about"><span>01 / ABOUT</span><p>Good digital experiences begin with clarity, thoughtful design, and attention to detail.</p></section>
+    
     <section className="process-section" id="process" aria-labelledby="process-title">
       <div className="process-heading">
         <div><span className="section-eyebrow">A CLEAR PATH FROM IDEA TO LAUNCH</span><h2 id="process-title">Good work happens<br/><em>one step at a time.</em></h2></div>
