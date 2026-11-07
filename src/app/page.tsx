@@ -88,6 +88,19 @@ export default function Home() {
       <div className="services-footer"><span>DESIGN · DEVELOPMENT · DIGITAL GROWTH</span><a href="#contact">Have a project in mind? Let’s talk ↗</a></div>
     </section>
     <section className="below-fold" id="about"><span>01 / ABOUT</span><p>Good digital experiences begin with clarity, thoughtful design, and attention to detail.</p></section>
-    <div id="process"/><div id="testimonials"/><div id="faq"/><div id="contact"/>
+    <section className="process-section" id="process" aria-labelledby="process-title">
+      <div className="process-heading">
+        <div><span className="section-eyebrow">A CLEAR PATH FROM IDEA TO LAUNCH</span><h2 id="process-title">Good work happens<br/><em>one step at a time.</em></h2></div>
+        <p>A thoughtful, collaborative process keeps every project focused — from understanding your goals to launching a website you’re proud to share.</p>
+      </div>
+      <div className="process-steps">
+        <article className="process-step"><span className="process-number">01</span><div className="process-icon" aria-hidden="true">◎</div><h3>Discover</h3><p>We start with a conversation about your business, audience, goals and what success should look like.</p><span className="process-tag">LISTEN · ALIGN · PLAN</span></article>
+        <article className="process-step"><span className="process-number">02</span><div className="process-icon" aria-hidden="true">✳</div><h3>Design</h3><p>I shape the structure and visual direction into a clear, engaging experience that feels right for your brand.</p><span className="process-tag">STRATEGY · STRUCTURE · UI</span></article>
+        <article className="process-step"><span className="process-number">03</span><div className="process-icon" aria-hidden="true">⌘</div><h3>Build</h3><p>Your approved design becomes a responsive website, carefully developed and checked across screen sizes.</p><span className="process-tag">DEVELOP · REFINE · TEST</span></article>
+        <article className="process-step"><span className="process-number">04</span><div className="process-icon" aria-hidden="true">↗</div><h3>Launch</h3><p>After final reviews, we get your website ready to go live — with a smooth handover for what comes next.</p><span className="process-tag">REVIEW · PUBLISH · GROW</span></article>
+      </div>
+      <div className="process-bottom"><span>COLLABORATIVE BY DESIGN</span><a href="#contact">Have a project in mind? Let’s make it happen ↗</a></div>
+    </section>
+    <div id="testimonials"/><div id="faq"/><div id="contact"/>
   </main>;
 }
