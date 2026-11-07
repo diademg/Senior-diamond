@@ -45,7 +45,7 @@ export default function Home() {
       <div className="work-grid">
         <article className="work-card">
           <a className="work-preview" href="https://bokt-updated-site.webflow.io/" target="_blank" rel="noreferrer" aria-label="View Bokt website">
-            <iframe className="bokt-screenshot-frame" title="Bokt homepage screenshot preview" loading="lazy" tabIndex={-1} srcDoc={`<!doctype html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff}img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center}</style></head><body><img src="/images/bokt-hero-preview.svg" alt="Bokt website homepage preview"></body></html>`}/>
+            <iframe className="bokt-screenshot-frame" title="Bokt homepage screenshot preview" loading="lazy" tabIndex={-1} srcDoc={`<!doctype html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff}img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center}</style></head><body><img src="https://raw.githubusercontent.com/diademg/Senior-diamond/main/Bokt%20Site.png" alt="Bokt website homepage preview"></body></html>`}/>
             <span className="preview-open"><Arrow/></span>
           </a>
           <div className="work-meta"><div className="work-title-wrap"><span className="work-number">01</span><div><h3>Bokt</h3><p>BRAND WEBSITE</p></div></div><a className="work-arrow" href="https://bokt-updated-site.webflow.io/" target="_blank" rel="noreferrer" aria-label="Open Bokt project"><Arrow/></a></div>
