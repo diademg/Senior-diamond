@@ -83,6 +83,7 @@ export default function Home() {
         <article className="service-card"><span className="service-index">05</span><div><h3>Landing Page Development</h3><p>Focused landing pages with persuasive structure, clear calls to action and a journey designed to drive enquiries.</p></div><span className="service-symbol">↗</span></article>
         <article className="service-card"><span className="service-index">06</span><div><h3>Website Optimization</h3><p>Improve website speed, usability, structure and on-page experience to help visitors take the next step.</p></div><span className="service-symbol">↗</span></article>
         <article className="service-card"><span className="service-index">07</span><div><h3>Digital Marketing</h3><p>Support your online growth with stronger digital touchpoints, campaign-ready pages and a more consistent brand presence.</p></div><span className="service-symbol">↗</span></article>
+        <article className="service-card"><span className="service-index">08</span><div><h3>Google AdSense</h3><p>AdSense setup and website integration, with thoughtful ad placement and guidance on creating a cleaner, policy-conscious monetization experience.</p></div><span className="service-symbol">↗</span></article>
       </div>
       <div className="services-footer"><span>DESIGN · DEVELOPMENT · DIGITAL GROWTH</span><a href="#contact">Have a project in mind? Let’s talk ↗</a></div>
     </section>
