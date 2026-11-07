@@ -67,7 +67,26 @@ export default function Home() {
       </div>
       <div className="work-footer"><span>SELECTED WORK / 2026</span><span>Strategy, design &amp; Webflow development</span></div>
     </section>
+    <section className="services-section" id="services" aria-labelledby="services-title">
+      <div className="services-heading">
+        <div>
+          <span className="section-eyebrow">WHAT I CAN DO FOR YOU</span>
+          <h2 id="services-title">Services built around<br/><em>your next move.</em></h2>
+        </div>
+        <p>From the first impression to the final interaction, I help businesses create better digital experiences and turn more of the right visitors into customers.</p>
+      </div>
+      <div className="services-list">
+        <article className="service-card"><span className="service-index">01</span><div><h3>Webflow Website Design</h3><p>Thoughtful, brand-led website design that gives your business a clear, confident online presence.</p></div><span className="service-symbol">↗</span></article>
+        <article className="service-card"><span className="service-index">02</span><div><h3>Webflow Redesign</h3><p>Refresh an outdated website with a cleaner visual direction, clearer messaging and a smoother user experience.</p></div><span className="service-symbol">↗</span></article>
+        <article className="service-card"><span className="service-index">03</span><div><h3>Webflow CMS &amp; Development</h3><p>Flexible Webflow builds and easy-to-manage CMS collections, developed to grow with your content and business.</p></div><span className="service-symbol">↗</span></article>
+        <article className="service-card"><span className="service-index">04</span><div><h3>Responsive Web Design</h3><p>Consistent, intuitive experiences that look and work beautifully across desktop, tablet and mobile.</p></div><span className="service-symbol">↗</span></article>
+        <article className="service-card"><span className="service-index">05</span><div><h3>Landing Page Development</h3><p>Focused landing pages with persuasive structure, clear calls to action and a journey designed to drive enquiries.</p></div><span className="service-symbol">↗</span></article>
+        <article className="service-card"><span className="service-index">06</span><div><h3>Website Optimization</h3><p>Improve website speed, usability, structure and on-page experience to help visitors take the next step.</p></div><span className="service-symbol">↗</span></article>
+        <article className="service-card"><span className="service-index">07</span><div><h3>Digital Marketing</h3><p>Support your online growth with stronger digital touchpoints, campaign-ready pages and a more consistent brand presence.</p></div><span className="service-symbol">↗</span></article>
+      </div>
+      <div className="services-footer"><span>DESIGN · DEVELOPMENT · DIGITAL GROWTH</span><a href="#contact">Have a project in mind? Let’s talk ↗</a></div>
+    </section>
     <section className="below-fold" id="about"><span>01 / ABOUT</span><p>Good digital experiences begin with clarity, thoughtful design, and attention to detail.</p></section>
-    <div id="services"/><div id="process"/><div id="testimonials"/><div id="faq"/><div id="contact"/>
+    <div id="process"/><div id="testimonials"/><div id="faq"/><div id="contact"/>
   </main>;
 }
