@@ -21,7 +21,7 @@ export default function Home() {
   const [testimonialPage, setTestimonialPage] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const testimonialPages = [0, 1, 2].map((page) => testimonials.slice(page * 3, page * 3 + 3));
-  return <main className="site-shell">    <header className="nav">
+  return <main className="site-shell" id="top">    <header className="nav">
       <a className="wordmark" href="#" aria-label="Adeoye Emmanuel home">Adeoye<br/>Emmanuel<span>.</span></a>
       <nav className="nav-links" aria-label="Main navigation">
         <a className="active" href="#">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQs</a>
@@ -186,7 +186,40 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <div id="contact"/>
+    <section className="contact-section" id="contact" aria-labelledby="contact-title">
+      <div className="contact-intro">
+        <span className="section-eyebrow">GET IN TOUCH</span>
+        <h2 id="contact-title">Start a project.</h2>
+        <p>A few details are enough to begin. I’ll reply with honest thoughts on what your website needs.</p>
+        <div className="contact-direct">
+          <span>HAVE A QUESTION OR AN IDEA?</span>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Connect with me on LinkedIn <Arrow/></a>
+        </div>
+        <div className="contact-note"><span>BASED IN NIGERIA</span><span>WORKING WITH CLIENTS WORLDWIDE</span></div>
+      </div>
+      <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+        <div className="contact-fields-two">
+          <label>NAME<input name="name" type="text" placeholder="First name" required /></label>
+          <label>COMPANY / BRAND<input name="company" type="text" placeholder="Company/Brand" /></label>
+          <label>EMAIL<input name="email" type="email" placeholder="you@company.com" required /></label>
+          <label>CURRENT WEBSITE<input name="website" type="url" placeholder="https://" /></label>
+        </div>
+        <label>BUDGET RANGE<select name="budget" defaultValue=""><option value="" disabled>Select your budget</option><option>Under $500</option><option>$500 – $1,000</option><option>$1,000 – $3,000</option><option>$3,000+</option><option>Not sure yet</option></select></label>
+        <label>TIMELINE<select name="timeline" defaultValue=""><option value="" disabled>When would you like to start?</option><option>As soon as possible</option><option>Within 2–3 weeks</option><option>Within a month</option><option>Flexible</option></select></label>
+        <fieldset className="contact-services"><legend>WHAT DO YOU NEED HELP WITH?</legend>
+          <label><input type="checkbox" name="services" value="Webflow website" /> Webflow website</label>
+          <label><input type="checkbox" name="services" value="Website redesign" /> Website redesign</label>
+          <label><input type="checkbox" name="services" value="Landing page" /> Landing page</label>
+          <label><input type="checkbox" name="services" value="Webflow CMS" /> Webflow CMS</label>
+          <label><input type="checkbox" name="services" value="Website optimization" /> Website optimization</label>
+          <label><input type="checkbox" name="services" value="Something else" /> Something else</label>
+        </fieldset>
+        <label>PROJECT DETAILS<textarea name="details" rows={4} placeholder="What are you looking to build, and what is not working?" required /></label>
+        <button className="contact-submit" type="submit">SEND PROJECT BRIEF <Arrow/></button>
+        <p className="contact-form-note">Your details help me understand the project before we talk.</p>
+      </form>
+    </section>
+    <footer className="site-footer"><span>© 2026 ADEOYE EMMANUEL</span><span>WEBFLOW DESIGN · DEVELOPMENT · DIGITAL GROWTH</span><a href="#top" onClick={(event) => {event.preventDefault(); window.scrollTo({top:0,behavior:"smooth"});}}>BACK TO TOP ↑</a></footer>
 
   </main>;
 }
