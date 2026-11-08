@@ -1061,3 +1061,13 @@ a{color:inherit;text-decoration:none}
 @media(prefers-reduced-motion:reduce){
   .testimonial-track,.testimonial-card,.testimonial-dots button,.testimonial-arrows button{animation:none!important;transition:none!important}
 }
+
+/* Responsive carousel page positioning */
+.testimonial-track{transform:translateX(calc(var(--testimonial-page, 0) * -33.333333%))}
+@media(max-width:650px){
+  .testimonial-track{width:900%;transform:translateX(calc(var(--testimonial-page, 0) * -11.111111%))}
+  .testimonial-page{flex:0 0 11.111111%;grid-template-columns:1fr;gap:10px}
+  .testimonial-card{min-height:210px;padding:17px 15px}
+  .testimonial-card blockquote{font-size:14px;margin:18px 0 16px}
+  .testimonial-card-arrow{display:grid}
+}
