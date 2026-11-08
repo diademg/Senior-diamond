@@ -1,8 +1,26 @@
+"use client";
+
+import { useState } from "react";
+
 const portrait = "/images/ChatGPT_Image_Sep_12__2026__08_46_11_AM-removebg-preview-removebg-preview.png";
 const Arrow = () => <span aria-hidden="true">↗</span>;
+
+const testimonials = [
+  { quote: "Emmanuel did an excellent job with my Webflow website design and CMS setup. Great communication, attention to detail, and quality delivery. I am very satisfied with the results. Highly recommended!", name: "tony", service: "WEBFLOW DESIGN & CMS" },
+  { quote: "Emmanuel did a fantastic job redesigning my Webflow website and optimizing it for SEO. The results are clean, professional, and well-structured. Great communication and attention to detail. Highly recommended!", name: "michael", service: "WEBFLOW REDESIGN & SEO" },
+  { quote: "Working with Emmanuel was a great experience. He understood my vision, created a beautiful Webflow design, and handled my social media professionally. I truly appreciate his creativity and dedication!", name: "cokemannch", service: "WEBFLOW DESIGN & SOCIAL MEDIA" },
+  { quote: "Emmanuel was incredibly helpful throughout the Google AdSense approval process. He guided everything professionally, paid attention to the requirements, and delivered great results. I am very happy with his service!", name: "jakejohnson01", service: "GOOGLE ADSENSE SUPPORT" },
+  { quote: "I have had a great experience working with Emmanuel on my digital marketing and social media management. He is consistent, creative, and understands how to keep my platforms active and engaging. Truly appreciate his ongoing support!", name: "shalin", service: "DIGITAL MARKETING & SOCIAL MEDIA" },
+  { quote: "Emmanuel brought a thoughtful approach to our project, combining an attractive, user-friendly website design with effective SEO strategies. He focused on creating a strong online presence that makes it easier for potential customers to discover our business.", name: "christ", service: "WEBSITE DESIGN & SEO" },
+  { quote: "Emmanuel did an amazing job improving our Webflow website. From fixing bugs and refining the CMS to optimizing performance, he handled everything with great expertise. The overall experience was smooth, and the results exceeded expectations!", name: "Client feedback", service: "WEBFLOW BUG FIXES, CMS & OPTIMIZATION" },
+  { quote: "Emmanuel helped improve our Google Business Profile with great attention to detail. His work was professional, communication was excellent, and he made the whole process straightforward. Highly recommend his services!", name: "savannah", service: "GOOGLE BUSINESS PROFILE" },
+  { quote: "I was sceptical at first, but he was genuinely interested in helping businesses to grow. He was very supportive, smart and knowledgeable about his work. Really good at what he does. Continue working with him!", name: "podlaaylsi", service: "ONGOING SUPPORT" }
+];
+
 export default function Home() {
-  return <main className="site-shell">
-    <header className="nav">
+  const [testimonialPage, setTestimonialPage] = useState(0);
+  const testimonialPages = [0, 1, 2].map((page) => testimonials.slice(page * 3, page * 3 + 3));
+  return <main className="site-shell">    <header className="nav">
       <a className="wordmark" href="#" aria-label="Adeoye Emmanuel home">Adeoye<br/>Emmanuel<span>.</span></a>
       <nav className="nav-links" aria-label="Main navigation">
         <a className="active" href="#">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQs</a>
@@ -130,6 +148,24 @@ export default function Home() {
         </div>
       </div>
       <div className="testimonial-footer"><span>BUILT ON COMMUNICATION &amp; COLLABORATION</span><a href="#contact">Let’s create something great together ↗</a></div>
+    </section>
+
+    <section className="testimonial-section" id="testimonials" aria-labelledby="testimonial-title">
+      <div className="testimonial-topline"><span className="section-eyebrow">KIND WORDS</span><span>CLIENT FEEDBACK / 09 REVIEWS</span></div>
+      <div className="testimonial-heading-row"><h2 id="testimonial-title">Built on trust.<br/><em>Backed by people.</em></h2><p>Good work is about more than what goes live. It’s about the people, collaboration, and care behind it.</p></div>
+      <div className="testimonial-carousel" aria-live="polite"><div className="testimonial-track" style={{ transform: `translateX(-${testimonialPage * 100}%)` }}>
+        {testimonialPages.map((page, pageIndex) => <div className="testimonial-page" key={pageIndex}>
+          {page.map((item, itemIndex) => <article className={`testimonial-card ${itemIndex === 1 ? "testimonial-card-featured" : ""}`} key={item.name}>
+            <div className="testimonial-card-top"><span className="testimonial-quote-mark">“</span><span>{String(pageIndex * 3 + itemIndex + 1).padStart(2, "0")} / 09</span></div>
+            <blockquote>{item.quote}</blockquote>
+            <div className="testimonial-card-credit"><span className="testimonial-avatar">{item.name === "Client feedback" ? "C" : item.name.charAt(0).toUpperCase()}</span><div><strong>{item.name}</strong><span>{item.service}</span></div><span className="testimonial-card-arrow">↗</span></div>
+          </article>)}
+        </div>)}
+      </div></div>
+      <div className="testimonial-controls"><span className="testimonial-count">TESTIMONIALS — SET {String(testimonialPage + 1).padStart(2, "0")} / 03</span>
+        <div className="testimonial-dots" aria-label="Choose testimonial page">{testimonialPages.map((_, i) => <button key={i} type="button" className={testimonialPage === i ? "active" : ""} aria-label={`Show testimonial set ${i + 1}`} aria-pressed={testimonialPage === i} onClick={() => setTestimonialPage(i)}/>)}</div>
+        <div className="testimonial-arrows"><button type="button" aria-label="Previous testimonials" onClick={() => setTestimonialPage((current) => (current + 2) % 3)}>←</button><button type="button" aria-label="Next testimonials" onClick={() => setTestimonialPage((current) => (current + 1) % 3)}>→</button></div>
+      </div>
     </section>
     <div id="faq"/><div id="contact"/>
   </main>;
