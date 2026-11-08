@@ -153,7 +153,7 @@ export default function Home() {
     <section className="testimonial-section" id="testimonials" aria-labelledby="testimonial-title">
       <div className="testimonial-topline"><span className="section-eyebrow">KIND WORDS</span><span>CLIENT FEEDBACK / 09 REVIEWS</span></div>
       <div className="testimonial-heading-row"><h2 id="testimonial-title">Built on trust.<br/><em>Backed by people.</em></h2><p>Good work is about more than what goes live. It’s about the people, collaboration, and care behind it.</p></div>
-      <div className="testimonial-carousel" aria-live="polite"><div className="testimonial-track" style={{ transform: `translateX(-${testimonialPage * 100}%)` }}>
+      <div className="testimonial-carousel" aria-live="polite"><div className="testimonial-track" style={{ "--testimonial-page": testimonialPage } as React.CSSProperties}>
         {testimonialPages.map((page, pageIndex) => <div className="testimonial-page" key={pageIndex}>
           {page.map((item, itemIndex) => <article className={`testimonial-card ${itemIndex === 1 ? "testimonial-card-featured" : ""}`} key={item.name}>
             <div className="testimonial-card-top"><span className="testimonial-quote-mark">“</span><span>{String(pageIndex * 3 + itemIndex + 1).padStart(2, "0")} / 09</span></div>
