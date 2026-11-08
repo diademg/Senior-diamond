@@ -19,6 +19,7 @@ const testimonials = [
 
 export default function Home() {
   const [testimonialPage, setTestimonialPage] = useState(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const testimonialPages = [0, 1, 2].map((page) => testimonials.slice(page * 3, page * 3 + 3));
   return <main className="site-shell">    <header className="nav">
       <a className="wordmark" href="#" aria-label="Adeoye Emmanuel home">Adeoye<br/>Emmanuel<span>.</span></a>
@@ -155,6 +156,37 @@ export default function Home() {
         <div className="testimonial-arrows"><button type="button" aria-label="Previous testimonials" onClick={() => setTestimonialPage((current) => (current + 2) % 3)}>←</button><button type="button" aria-label="Next testimonials" onClick={() => setTestimonialPage((current) => (current + 1) % 3)}>→</button></div>
       </div>
     </section>
-    <div id="faq"/><div id="contact"/>
+
+    <section className="faq-section" id="faq" aria-labelledby="faq-title">
+      <div className="faq-heading">
+        <div>
+          <span className="section-eyebrow">GOOD TO KNOW / FAQ</span>
+          <h2 id="faq-title">A few things<br/><em>you might be wondering.</em></h2>
+        </div>
+        <p>Have a question before getting started? Here are a few helpful details about how I work and what I can help you with.</p>
+      </div>
+      <div className="faq-layout">
+        <div className="faq-intro"><span>QUESTIONS, ANSWERED</span><p>Every project is different. If you have something specific in mind, I’m happy to talk it through.</p><a href="#contact">LET’S TALK <span aria-hidden="true">↗</span></a></div>
+        <div className="faq-list">
+          {[
+            {q:"Can you work from an existing Figma design?",a:"Yes. If you already have a Figma design, I can turn it into a responsive Webflow website, keeping the layout and visual direction consistent while making sure the experience works smoothly across desktop, tablet and mobile."},
+            {q:"Can you improve an existing Webflow website?",a:"Absolutely. I can review your existing Webflow website and help with redesigns, layout refinements, CMS improvements, responsive fixes, bug fixes and performance-focused updates. We’ll first agree on the areas that need attention."},
+            {q:"What services do you offer?",a:"I work on Webflow website design and development, redesigns, CMS setup, responsive improvements, landing pages, website optimization and selected digital growth services such as SEO and digital marketing support."},
+            {q:"Do you build responsive Webflow websites?",a:"Yes. I build and refine websites with different screen sizes in mind, checking how the layout, content and interactions work across desktop, tablet and mobile."},
+            {q:"Can you help with Webflow CMS setup or changes?",a:"Yes. I can structure CMS collections, connect dynamic content and refine existing CMS setups so your website is easier to manage and update."},
+            {q:"How long does a website project take?",a:"The timeline depends on the size of the website, the complexity of the design and the content or functionality required. Once I understand your scope, I’ll provide a realistic timeline before work begins."},
+            {q:"What do you need from me to get started?",a:"Usually, a brief about your business and goals, any existing website or Figma link, your content and brand assets, and a clear idea of what you’d like to achieve. I’ll let you know if anything else is needed."},
+            {q:"Do you offer ongoing website support?",a:"I can help with follow-up improvements, fixes and updates after a project. Share what you need, and we can agree on the scope and the best way to handle it."}
+          ].map((item, index) => <article className={`faq-item ${openFaq === index ? "is-open" : ""}`} key={item.q}>
+            <button className="faq-question" type="button" aria-expanded={openFaq === index} aria-controls={`faq-answer-${index}`} onClick={() => setOpenFaq(openFaq === index ? null : index)}>
+              <span className="faq-number">{String(index + 1).padStart(2,"0")}</span><span className="faq-question-text">{item.q}</span><span className="faq-toggle" aria-hidden="true">{openFaq === index ? "−" : "+"}</span>
+            </button>
+            <div className="faq-answer-wrap" id={`faq-answer-${index}`} aria-hidden={openFaq !== index}><div className="faq-answer"><p>{item.a}</p></div></div>
+          </article>)}
+        </div>
+      </div>
+    </section>
+    <div id="contact"/>
+
   </main>;
 }
