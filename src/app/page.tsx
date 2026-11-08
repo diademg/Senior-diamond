@@ -137,6 +137,24 @@ export default function Home() {
         <a className="about-cta" href="#contact">WORK WITH ME <span aria-hidden="true">↗</span></a>
       </div>
     </section>
+
+    <section className="testimonial-section" id="testimonials" aria-labelledby="testimonial-title">
+      <div className="testimonial-topline"><span className="section-eyebrow">KIND WORDS / CLIENT FEEDBACK</span><span>CLIENT FEEDBACK / 09 REVIEWS</span></div>
+      <div className="testimonial-heading-row"><h2 id="testimonial-title">Built on trust.<br/><em>Backed by people.</em></h2><p>Good work is about more than what goes live. It’s about the people, collaboration, and care behind it.</p></div>
+      <div className="testimonial-carousel" aria-live="polite"><div className="testimonial-track" style={{ "--testimonial-page": testimonialPage } as React.CSSProperties}>
+        {testimonialPages.map((page, pageIndex) => <div className="testimonial-page" key={pageIndex}>
+          {page.map((item, itemIndex) => <article className={`testimonial-card ${itemIndex === 1 ? "testimonial-card-featured" : ""}`} key={item.name}>
+            <div className="testimonial-card-top"><span className="testimonial-quote-mark">“</span><span>{String(pageIndex * 3 + itemIndex + 1).padStart(2, "0")} / 09</span></div>
+            <blockquote>{item.quote}</blockquote>
+            <div className="testimonial-card-credit"><span className="testimonial-avatar">{item.name === "Client feedback" ? "C" : item.name.charAt(0).toUpperCase()}</span><div><strong>{item.name}</strong><span>{item.service}</span></div><span className="testimonial-card-arrow">↗</span></div>
+          </article>)}
+        </div>)}
+      </div></div>
+      <div className="testimonial-controls"><span className="testimonial-count">TESTIMONIALS — SET {String(testimonialPage + 1).padStart(2, "0")} / 03</span>
+        <div className="testimonial-dots" aria-label="Choose testimonial page">{testimonialPages.map((_, i) => <button key={i} type="button" className={testimonialPage === i ? "active" : ""} aria-label={`Show testimonial set ${i + 1}`} aria-pressed={testimonialPage === i} onClick={() => setTestimonialPage(i)}/>)}</div>
+        <div className="testimonial-arrows"><button type="button" aria-label="Previous testimonials" onClick={() => setTestimonialPage((current) => (current + 2) % 3)}>←</button><button type="button" aria-label="Next testimonials" onClick={() => setTestimonialPage((current) => (current + 1) % 3)}>→</button></div>
+      </div>
+    </section>
     <div id="faq"/><div id="contact"/>
   </main>;
 }
