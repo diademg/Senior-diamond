@@ -101,6 +101,18 @@ export default function Home() {
       </div>
       <div className="process-bottom"><span>COLLABORATIVE BY DESIGN</span><a href="#contact">Have a project in mind? Let’s make it happen ↗</a></div>
     </section>
-    <div id="testimonials"/><div id="faq"/><div id="contact"/>
+    <section className="testimonial-section" id="testimonials" aria-labelledby="testimonial-title">
+      <div className="testimonial-topline"><span className="section-eyebrow">KIND WORDS / CLIENT FEEDBACK</span><span>01 / TESTIMONIAL</span></div>
+      <div className="testimonial-content">
+        <div className="testimonial-heading"><h2 id="testimonial-title">The best part of the work is <em>earning trust.</em></h2><p>Good collaboration makes good websites. Here’s what a client shared after a Webflow redesign.</p></div>
+        <div className="testimonial-quote">
+          <span className="quote-mark" aria-hidden="true">“</span>
+          <blockquote> I especially appreciated the patience, communication, and willingness to listen to my ideas and make adjustments.</blockquote>
+          <div className="testimonial-credit"><span className="testimonial-line"/><div><strong>Webflow redesign client</strong><span>HOMEPAGE &amp; PRODUCT PAGE IMPROVEMENTS</span></div></div>
+        </div>
+      </div>
+      <div className="testimonial-footer"><span>BUILT ON COMMUNICATION &amp; COLLABORATION</span><a href="#contact">Let’s create something great together ↗</a></div>
+    </section>
+    <div id="faq"/><div id="contact"/>
   </main>;
 }
