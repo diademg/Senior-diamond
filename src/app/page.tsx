@@ -88,6 +88,24 @@ export default function Home() {
       <div className="services-footer"><span>DESIGN · DEVELOPMENT · DIGITAL GROWTH</span><a href="#contact">Have a project in mind? Let’s talk ↗</a></div>
     </section>
     
+    <section className="about-section" id="about" aria-labelledby="about-title">
+      <div className="about-visual">
+        <div className="about-portrait-frame">
+          <div className="about-portrait-glow" aria-hidden="true"/>
+          <img src={portrait} alt="Adeoye Emmanuel, Webflow developer and website designer" loading="lazy"/>
+          <div className="about-portrait-copy"><span>IDEAS · DESIGN · DEVELOPMENT</span><strong>ADEOYE<br/>EMMANUEL</strong><small>WEBFLOW DEVELOPER &amp; WEBSITE SPECIALIST</small></div>
+        </div>
+      </div>
+      <div className="about-copy">
+        <span className="section-eyebrow">A LITTLE ABOUT ME</span>
+        <h2 id="about-title">More than a <em>Webflow</em> developer.</h2>
+        <p className="about-lead">I’m Adeoye Emmanuel, a Webflow developer and website specialist who helps businesses build a stronger presence online.</p>
+        <p>I design, build, redesign and improve Webflow websites — bringing together clear structure, thoughtful visuals and responsive development to create experiences that feel right for the brand and work for the people using them.</p>
+        <p>My focus goes beyond making a website look good. I care about how clearly it communicates, how easily visitors find what they need, and how effectively it guides them towards taking action.</p>
+        <p>Whether you’re starting from scratch or ready to improve an existing website, I bring a practical, detail-focused approach to turning your ideas into a polished digital experience.</p>
+        <a className="about-cta" href="#contact">WORK WITH ME <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
     <section className="process-section" id="process" aria-labelledby="process-title">
       <div className="process-heading">
         <div><span className="section-eyebrow">A CLEAR PATH FROM IDEA TO LAUNCH</span><h2 id="process-title">Good work happens<br/><em>one step at a time.</em></h2></div>
