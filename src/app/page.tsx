@@ -20,6 +20,8 @@ const testimonials = [
 export default function Home() {
   const [testimonialPage, setTestimonialPage] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [contactStatus, setContactStatus] = useState("");
+  const [contactSubmitting, setContactSubmitting] = useState(false);
   const testimonialPages = [0, 1, 2].map((page) => testimonials.slice(page * 3, page * 3 + 3));
   return <main className="site-shell" id="top">    <header className="nav">
       <a className="wordmark" href="#" aria-label="Adeoye Emmanuel home">Adeoye<br/>Emmanuel<span>.</span></a>
@@ -197,7 +199,30 @@ export default function Home() {
         </div>
         <div className="contact-note"><span>BASED IN NIGERIA</span><span>WORKING WITH CLIENTS WORLDWIDE</span></div>
       </div>
-      <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+      <form className="contact-form" onSubmit={async (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        setContactSubmitting(true);
+        setContactStatus("");
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+        payload.services = formData.getAll("services").join(", ") || "Not specified";
+        payload._subject = "New portfolio project enquiry — Adeoye Emmanuel";
+        try {
+          const response = await fetch("https://formsubmit.co/ajax/adeoyeemmanuel904@gmail.com", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          if (!response.ok) throw new Error("Message could not be sent");
+          setContactStatus("Thanks for reaching out. Your project brief has been sent successfully. I’ll be in touch soon.");
+          form.reset();
+        } catch {
+          setContactStatus("Something went wrong while sending your brief. Please email adeoyeemmanuel904@gmail.com directly.");
+        } finally {
+          setContactSubmitting(false);
+        }
+      }}>
         <div className="contact-fields-two">
           <label>NAME<input name="name" type="text" placeholder="First name" required /></label>
           <label>COMPANY / BRAND<input name="company" type="text" placeholder="Company/Brand" /></label>
@@ -215,8 +240,8 @@ export default function Home() {
           <label><input type="checkbox" name="services" value="Something else" /> Something else</label>
         </fieldset>
         <label>PROJECT DETAILS<textarea name="details" rows={4} placeholder="What are you looking to build, and what is not working?" required /></label>
-        <button className="contact-submit" type="submit">SEND PROJECT BRIEF <Arrow/></button>
-        <p className="contact-form-note">Your details help me understand the project before we talk.</p>
+        <button className="contact-submit" type="submit" disabled={contactSubmitting}>{contactSubmitting ? "SENDING..." : "SEND PROJECT BRIEF"} <Arrow/></button>
+        <p className="contact-form-note" role="status" aria-live="polite">{contactStatus || "Your details help me understand the project before we talk."}</p>
       </form>
     </section>
     <footer className="site-footer"><span>© 2026 ADEOYE EMMANUEL</span><span>WEBFLOW DESIGN · DEVELOPMENT · DIGITAL GROWTH</span><a href="#top" onClick={(event) => {event.preventDefault(); window.scrollTo({top:0,behavior:"smooth"});}}>BACK TO TOP ↑</a></footer>
