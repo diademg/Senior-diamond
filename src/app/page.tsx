@@ -24,7 +24,7 @@ export default function Home() {
   const [contactSubmitting, setContactSubmitting] = useState(false);
   const testimonialPages = [0, 1, 2].map((page) => testimonials.slice(page * 3, page * 3 + 3));
   return <main className="site-shell" id="top">    <header className="nav">
-      <a className="wordmark" href="#" aria-label="Adeoye Emmanuel home">Adeoye<br/>Emmanuel<span>.</span></a>
+      <a className="wordmark" href="#" aria-label="Adeoye Emmanuel home"><span className="wordmark-line wordmark-first">ADEOYE</span><span className="wordmark-line wordmark-second">EMMANUEL<span className="wordmark-accent">.</span></span></a>
       <nav className="nav-links" aria-label="Main navigation">
         <a className="active" href="#">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQs</a>
       </nav>
