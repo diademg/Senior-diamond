@@ -195,7 +195,7 @@ export default function Home() {
         <p>A few details are enough to begin. I’ll reply with honest thoughts on what your website needs.</p>
         <div className="contact-direct">
           <span>HAVE A QUESTION OR AN IDEA?</span>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Connect with me on LinkedIn <Arrow/></a>
+          <a href="https://www.linkedin.com/in/adeoye-emmanuel-webflow/" target="_blank" rel="noreferrer">Connect with me on LinkedIn <Arrow/></a>
         </div>
         <div className="contact-note"><span>BASED IN NIGERIA</span><span>WORKING WITH CLIENTS WORLDWIDE</span></div>
       </div>
