@@ -1263,3 +1263,47 @@ a{color:inherit;text-decoration:none}
 .footer-bottom a{color:#55574f;text-decoration:none;white-space:nowrap}
 @media(max-width:800px){.footer-main{grid-template-columns:1fr 1fr;gap:38px 28px;padding:45px 0}.footer-brand{grid-column:1/-1}.footer-cta{align-self:start}.footer-bottom{flex-wrap:wrap}}
 @media(max-width:520px){.footer-main{grid-template-columns:1fr 1fr;gap:34px 18px;padding:40px 0}.footer-brand{grid-column:1/-1}.footer-column a{font-size:10px}.footer-cta{grid-column:1/-1}.footer-bottom{align-items:flex-start;flex-direction:column;gap:10px;font-size:7px}}
+
+
+/* Refined outlined personal-brand wordmark */
+.nav .wordmark{
+  min-width:132px;
+  width:132px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  gap:0;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:20px;
+  line-height:.82;
+  font-weight:900;
+  letter-spacing:-1.45px;
+  text-decoration:none;
+  transform:rotate(-1deg);
+  transition:transform .25s ease,filter .25s ease;
+}
+.nav .wordmark-line{
+  display:block;
+  white-space:nowrap;
+  color:#fff;
+  -webkit-text-stroke:1.35px #171815;
+  paint-order:stroke fill;
+  text-shadow:1.5px 1.5px 0 #171815,-.7px -.7px 0 #171815;
+}
+.nav .wordmark-first{padding-left:2px;font-size:20px;letter-spacing:-1.55px}
+.nav .wordmark-second{font-size:18px;letter-spacing:-1.2px}
+.nav .wordmark-accent{
+  color:#354cff;
+  -webkit-text-stroke:1px #171815;
+  text-shadow:none;
+  margin-left:1px;
+}
+.nav .wordmark:hover{transform:rotate(0deg) translateY(-1px);filter:drop-shadow(0 3px 3px rgba(20,25,45,.12))}
+@media(max-width:900px){
+  .nav .wordmark{min-width:116px;width:116px;font-size:18px}
+  .nav .wordmark-first{font-size:18px}
+  .nav .wordmark-second{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.nav .wordmark{transition:none}}
