@@ -244,7 +244,38 @@ export default function Home() {
         <p className="contact-form-note" role="status" aria-live="polite">{contactStatus || "Your details help me understand the project before we talk."}</p>
       </form>
     </section>
-    <footer className="site-footer"><span>© 2026 ADEOYE EMMANUEL</span><span>WEBFLOW DESIGN · DEVELOPMENT · DIGITAL GROWTH</span><a href="#top" onClick={(event) => {event.preventDefault(); window.scrollTo({top:0,behavior:"smooth"});}}>BACK TO TOP ↑</a></footer>
+    <footer className="site-footer" aria-label="Website footer">
+      <div className="footer-main">
+        <div className="footer-brand">
+          <a className="footer-wordmark" href="#top" aria-label="Adeoye Emmanuel home">Adeoye<br/>Emmanuel<span>.</span></a>
+          <p>Thoughtful websites. Built to move brands forward.</p>
+          <a className="footer-email" href="mailto:adeoyeemmanuel904@gmail.com">adeoyeemmanuel904@gmail.com <Arrow/></a>
+        </div>
+        <div className="footer-column">
+          <span className="footer-label">EXPLORE</span>
+          <a href="#about">About</a><a href="#services">Services</a><a href="#work">Selected Work</a><a href="#process">My Process</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQs</a><a href="#contact">Contact</a>
+        </div>
+        <div className="footer-column">
+          <span className="footer-label">FOLLOW ALONG</span>
+          <a href="https://www.linkedin.com/in/adeoye-emmanuel-webflow/" target="_blank" rel="noreferrer">LinkedIn <Arrow/></a>
+          <a href="https://www.facebook.com/profile.php?id=61595180047518" target="_blank" rel="noreferrer">Facebook <Arrow/></a>
+          <a href="https://www.instagram.com/emmanuel_ade0ye/" target="_blank" rel="noreferrer">Instagram <Arrow/></a>
+          <a href="https://x.com/Emmanuelwebflow" target="_blank" rel="noreferrer">X / Twitter <Arrow/></a>
+          <a href="https://www.pinterest.com/adeoyeemmanuel904/" target="_blank" rel="noreferrer">Pinterest <Arrow/></a>
+          <a href="https://www.fiverr.com/s/VrDB1Am" target="_blank" rel="noreferrer">Fiverr <Arrow/></a>
+        </div>
+        <div className="footer-cta">
+          <span className="footer-label">HAVE SOMETHING IN MIND?</span>
+          <h2>Let’s make<br/><em>it happen.</em></h2>
+          <a href="#contact">START A PROJECT <Arrow/></a>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <span>© 2026 ADEOYE EMMANUEL. ALL RIGHTS RESERVED.</span>
+        <span>WEBFLOW DESIGN · DEVELOPMENT · DIGITAL GROWTH</span>
+        <a href="#top" onClick={(event) => {event.preventDefault(); window.scrollTo({top:0,behavior:"smooth"});}}>BACK TO TOP ↑</a>
+      </div>
+    </footer>
 
   </main>;
 }
